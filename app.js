@@ -223,13 +223,19 @@ function buildSnapStory() {
 
 function onSnapScroll() {
   if (!snapEl) return;
-  const slideH = snapEl.clientHeight;
-  const idx    = Math.round(snapEl.scrollTop / slideH);
 
-  // Update all dot sets
+  // Find the slide whose top sits closest to the container top
+  // (slides can be taller than the viewport when a message runs long).
+  const cTop   = snapEl.getBoundingClientRect().top;
+  const slides = snapEl.querySelectorAll(".snap-slide");
+  let idx = 0, best = Infinity;
+  slides.forEach((s, i) => {
+    const d = Math.abs(s.getBoundingClientRect().top - cTop);
+    if (d < best) { best = d; idx = i; }
+  });
+
   document.querySelectorAll(".ss-dots").forEach((dotSet) => {
-    const dots = dotSet.querySelectorAll(".ss-dot");
-    dots.forEach((d, di) => d.classList.toggle("active", di === idx));
+    dotSet.querySelectorAll(".ss-dot").forEach((d, di) => d.classList.toggle("active", di === idx));
   });
 }
 
