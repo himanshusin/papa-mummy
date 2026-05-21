@@ -222,7 +222,18 @@ function initMusic() {
   backgroundMusic.loop = true;
   backgroundMusic.volume = 0.4;
   
-  musicToggle.addEventListener("click", () => {
+  // 1. Attempt to autoplay immediately on load (if the browser/platform rules permit it)
+  backgroundMusic.play().then(() => {
+    musicToggle.classList.add("playing");
+    musicToggle.querySelector(".music-text").innerText = "म्यूट करें 🔇";
+    isMusicPlaying = true;
+  }).catch(err => {
+    console.log("Direct autoplay blocked by browser policy. Waiting for user interaction.");
+  });
+  
+  // Toggle Button Click Handler (Play/Pause manual override)
+  musicToggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent trigger from bubbling to document interaction listeners
     if (isMusicPlaying) {
       backgroundMusic.pause();
       musicToggle.classList.remove("playing");
@@ -234,20 +245,32 @@ function initMusic() {
         musicToggle.querySelector(".music-text").innerText = "म्यूट करें 🔇";
         isMusicPlaying = true;
       }).catch(err => {
-        console.log("Audio blocked by browser.", err);
+        console.log("Audio play blocked.", err);
       });
     }
   });
 
+  // 2. Interaction-based fallback (triggers on very first touch, click, or key press)
   const startMusicOnInteraction = () => {
     if (!isMusicPlaying && backgroundMusic) {
       backgroundMusic.play().then(() => {
         musicToggle.classList.add("playing");
         musicToggle.querySelector(".music-text").innerText = "म्यूट करें 🔇";
         isMusicPlaying = true;
+        removeInteractionListeners();
       }).catch(() => {});
-      document.removeEventListener("click", startMusicOnInteraction);
+    } else {
+      removeInteractionListeners();
     }
   };
+
+  const removeInteractionListeners = () => {
+    document.removeEventListener("click", startMusicOnInteraction);
+    document.removeEventListener("touchstart", startMusicOnInteraction);
+    document.removeEventListener("keydown", startMusicOnInteraction);
+  };
+
   document.addEventListener("click", startMusicOnInteraction);
+  document.addEventListener("touchstart", startMusicOnInteraction);
+  document.addEventListener("keydown", startMusicOnInteraction);
 }
