@@ -124,6 +124,7 @@ const memories = [
 
 // Current State variables
 let backgroundMusic = null;
+let wantsMusic = true; // Default state is ON
 let isMusicPlaying = false;
 
 // Local shehnai/instrumental audio file
@@ -223,39 +224,44 @@ function initMusic() {
   backgroundMusic.volume = 0.4;
   
   // 1. Attempt to autoplay immediately on load (if the browser/platform rules permit it)
-  backgroundMusic.play().then(() => {
-    musicToggle.classList.add("playing");
-    musicToggle.querySelector(".music-text").innerText = "म्यूट करें 🔇";
-    isMusicPlaying = true;
-  }).catch(err => {
-    console.log("Direct autoplay blocked by browser policy. Waiting for user interaction.");
-  });
+  if (wantsMusic) {
+    backgroundMusic.play().then(() => {
+      isMusicPlaying = true;
+    }).catch(err => {
+      console.log("Direct autoplay blocked by browser policy. Waiting for user interaction.");
+    });
+  }
   
   // Toggle Button Click Handler (Play/Pause manual override)
   musicToggle.addEventListener("click", (e) => {
     e.stopPropagation(); // Prevent trigger from bubbling to document interaction listeners
-    if (isMusicPlaying) {
+    if (wantsMusic) {
+      // User opted to mute/stop the music
+      wantsMusic = false;
       backgroundMusic.pause();
+      isMusicPlaying = false;
       musicToggle.classList.remove("playing");
       musicToggle.querySelector(".music-text").innerText = "संगीत बजाएं ♫";
-      isMusicPlaying = false;
+      removeInteractionListeners();
     } else {
+      // User opted to enable/start the music
+      wantsMusic = true;
+      musicToggle.classList.add("playing");
+      musicToggle.querySelector(".music-text").innerText = "म्यूट करें 🔇";
       backgroundMusic.play().then(() => {
-        musicToggle.classList.add("playing");
-        musicToggle.querySelector(".music-text").innerText = "म्यूट करें 🔇";
         isMusicPlaying = true;
       }).catch(err => {
-        console.log("Audio play blocked.", err);
+        console.log("Audio play blocked on manual trigger, waiting for interaction.", err);
+        isMusicPlaying = false;
+        addInteractionListeners();
       });
     }
   });
 
   // 2. Interaction-based fallback (triggers on very first touch, click, or key press)
   const startMusicOnInteraction = () => {
-    if (!isMusicPlaying && backgroundMusic) {
+    if (wantsMusic && !isMusicPlaying && backgroundMusic) {
       backgroundMusic.play().then(() => {
-        musicToggle.classList.add("playing");
-        musicToggle.querySelector(".music-text").innerText = "म्यूट करें 🔇";
         isMusicPlaying = true;
         removeInteractionListeners();
       }).catch(() => {});
@@ -264,13 +270,18 @@ function initMusic() {
     }
   };
 
+  const addInteractionListeners = () => {
+    document.addEventListener("click", startMusicOnInteraction);
+    document.addEventListener("touchstart", startMusicOnInteraction);
+    document.addEventListener("keydown", startMusicOnInteraction);
+  };
+
   const removeInteractionListeners = () => {
     document.removeEventListener("click", startMusicOnInteraction);
     document.removeEventListener("touchstart", startMusicOnInteraction);
     document.removeEventListener("keydown", startMusicOnInteraction);
   };
 
-  document.addEventListener("click", startMusicOnInteraction);
-  document.addEventListener("touchstart", startMusicOnInteraction);
-  document.addEventListener("keydown", startMusicOnInteraction);
+  // Bind interaction listeners on startup
+  addInteractionListeners();
 }
