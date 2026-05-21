@@ -126,8 +126,8 @@ const memories = [
 let backgroundMusic = null;
 let isMusicPlaying = false;
 
-// Soft instrumental shehnai/acoustic sample for traditional background ambient feel
-const weddingInstrumental = "https://assets.mixkit.co/music/preview/mixkit-beautiful-dream-in-paris-483.mp3"; 
+// Local shehnai/instrumental audio file
+const weddingInstrumental = "music.mp3"; 
 
 document.addEventListener("DOMContentLoaded", () => {
   initApp();
