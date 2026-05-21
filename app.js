@@ -518,12 +518,18 @@ function initMusic() {
       events: {
         onReady: (e) => {
           ytReady = true;
-          e.target.setVolume(38);
-          if (wantsMusic) e.target.playVideo(); // may be blocked until a gesture
+          e.target.setVolume(42);
+          attemptPlay(); // default ON — try immediately
         },
         onStateChange: (e) => {
-          if (e.data === YT.PlayerState.PLAYING) setUI(true);
-          else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) setUI(false);
+          if (e.data === YT.PlayerState.PLAYING) {
+            setUI(true);
+            removeGestureListeners(); // music is live; stop retrying
+          } else if (e.data === YT.PlayerState.ENDED) {
+            if (wantsMusic) attemptPlay();
+          } else if (e.data === YT.PlayerState.PAUSED) {
+            setUI(false);
+          }
         }
       }
     });
@@ -534,14 +540,18 @@ function initMusic() {
   tag.src = "https://www.youtube.com/iframe_api";
   document.head.appendChild(tag);
 
-  // Browsers block autoplay-with-sound; resume on the first user gesture.
-  const onFirst = () => {
-    if (wantsMusic && ytReady && !musicPlaying) ytPlayer.playVideo();
-    document.removeEventListener("touchstart", onFirst);
-    document.removeEventListener("click",      onFirst);
-  };
-  document.addEventListener("touchstart", onFirst, { passive: true, once: true });
-  document.addEventListener("click",      onFirst, { once: true });
+  // Music is ON by default. Browsers block autoplay-with-sound until the
+  // visitor interacts, so keep retrying on every gesture until it actually
+  // starts (do NOT stop after the first tap — the API may not be ready yet).
+  function attemptPlay() {
+    if (wantsMusic && ytReady && ytPlayer && !musicPlaying) ytPlayer.playVideo();
+  }
+  function removeGestureListeners() {
+    ["touchstart", "pointerdown", "click", "keydown"].forEach(ev =>
+      document.removeEventListener(ev, attemptPlay));
+  }
+  ["touchstart", "pointerdown", "click", "keydown"].forEach(ev =>
+    document.addEventListener(ev, attemptPlay, { passive: true }));
 
   // FAB toggles based on actual playback state.
   fab.addEventListener("click", (e) => {

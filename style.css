@@ -1099,6 +1099,34 @@ a    { text-decoration: none; color: inherit; }
   .lb-prev { left: 0.6rem; }
   .lb-next { right: 0.6rem; }
   .lb-prev, .lb-next { width: 46px; height: 46px; font-size: 2.4rem; }
+
+  /* ── Larger, comfortably legible mobile typography ─────────────── */
+  .hero-eyebrow       { font-size: 1.7rem; }
+  .hero-headline      { font-size: 4rem; }
+  .hero-subline       { font-size: 2.6rem; }
+  .hero-cta           { font-size: 2.1rem; padding: 1.6rem 3.6rem; }
+
+  .ticker-track       { font-size: 1.8rem; }
+
+  .sec-title          { font-size: 4rem; }
+
+  .ss-chapter,
+  .ss-counter         { font-size: 1.5rem; }
+  .ss-title           { font-size: 3.6rem; }
+  .ss-desc            { font-size: 2.1rem; line-height: 1.95; }
+
+  .snap-end-label     { font-size: 3.2rem; }
+  .snap-end-btn       { font-size: 2.2rem; }
+
+  .mi-cap             { font-size: 2.1rem; }
+
+  .big-quote          { font-size: 3.4rem; }
+  .quote-credit       { font-size: 1.9rem; }
+
+  .footer-ded         { font-size: 1.9rem; }
+  .footer-date        { font-size: 1.8rem; }
+
+  .lb-cap             { font-size: 2rem; }
 }
 
 /* ── No-hover devices: strip sticky hover states ─────────────────── */
