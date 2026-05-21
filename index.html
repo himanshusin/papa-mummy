@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>विवाह की 56वीं वर्षगांठ - पापा और मम्मी</title>
+  <meta name="description" content="पापा और मम्मी की विवाह की 56वीं वर्षगांठ के सुंदर सफर की एक डिजिटल और संगीतमय यात्रा।">
+  <meta name="keywords" content="सालगिरह, वर्षगांठ, पापा, मम्मी, विवाह वर्षगांठ, 56वीं वर्षगांठ">
+  
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Music Playback Control -->
+  <div class="music-bar" id="music-container">
+    <button class="music-toggle-btn" id="music-toggle" aria-label="संगीतमय पृष्ठभूमि चालू/बंद करें">
+      <div class="music-icon-anim">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="music-text">संगीत बजाएं ♫</span>
+    </button>
+  </div>
+
+  <!-- 1. Celebratory Hero Landing -->
+  <header class="hero-section">
+    <div class="hero-background"></div>
+    <div class="mandala-overlay"></div>
+    <div class="gold-particles"></div>
+    
+    <div class="hero-content">
+      <span class="hero-years">56</span>
+      <div class="hero-badge">स्वर्ण उत्सव</div>
+      <h1 class="hero-title-hindi">पापा और मम्मी की 56वीं वर्षगांठ</h1>
+      
+      <div class="hero-action-buttons">
+        <a href="#story" class="btn btn-gold">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right: 5px;">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg> सफरनामा देखें
+        </a>
+      </div>
+    </div>
+    
+    <a href="#story" class="scroll-indicator" aria-label="सफरनामा की ओर आगे बढ़ें">
+      <span>नीचे स्क्रॉल करें</span>
+      <div class="arrow-down"></div>
+    </a>
+  </header>
+
+  <!-- 2. Story Scrollytelling Section -->
+  <main id="story" class="content-section cream-bg">
+    <div class="section-title">
+      <h2>प्यार का सुंदर सफर</h2>
+      <div class="ornament-divider">❦ ❦ ❦</div>
+    </div>
+    
+    <!-- Timeline scroll container dynamically loaded via app.js -->
+    <div class="story-timeline-container" id="story-timeline">
+      <div style="text-align: center; padding: 3rem; color: var(--primary-pastel-dark);">
+        <h3>सफरनामा लोड हो रहा है...</h3>
+      </div>
+    </div>
+  </main>
+
+  <!-- 3. Photo Collage Legacy Section -->
+  <section id="collage" class="content-section collage-section">
+    <div class="section-title" style="margin-bottom: 4rem;">
+      <h2>यादों का झरोखा</h2>
+      <div class="ornament-divider" style="opacity: 0.7;">✦ ✦ ✦</div>
+    </div>
+    
+    <!-- Grid elements loaded dynamically via app.js -->
+    <div class="collage-grid" id="collage-grid"></div>
+  </section>
+
+
+
+  <!-- 5. Footer -->
+  <footer class="app-footer">
+    <div class="footer-mandala"></div>
+    <div class="footer-quote">"जीवन का सबसे सुंदर वरदान, एक साथ बिताए 56 साल।"</div>
+    <div class="footer-dedication">
+      सादर समर्पित आपके बच्चों, दामादों और नाती-पोतों की तरफ से।<br>
+      सप्रेम निर्मित — 21 मई, 2026.
+    </div>
+  </footer>
+
+  <!-- Javascript Modules -->
+  <script src="app.js"></script>
+</body>
+</html>
