@@ -119,7 +119,8 @@ const memories = [
 ];
 
 // ── State ─────────────────────────────────────────────────────────
-let audio        = null;
+let ytPlayer     = null;
+let ytReady      = false;
 let musicPlaying = false;
 let wantsMusic   = true;
 let lbIndex      = 0;
@@ -478,47 +479,74 @@ function initLightbox() {
 }
 
 // ════════════════════════════════════════════════════════════════════
-//  MUSIC
+//  MUSIC  — YouTube IFrame Player API (background audio)
 // ════════════════════════════════════════════════════════════════════
+const YT_VIDEO_ID = "606CgcbkgEY"; // Mohammed Rafi — soulful romantic songs
+
 function initMusic() {
   const fab  = document.getElementById("musicFab");
   const bars = document.getElementById("vizBars");
   if (!fab) return;
-
-  audio        = new Audio("music.mp3");
-  audio.loop   = true;
-  audio.volume = 0.38;
 
   const setUI = (playing) => {
     musicPlaying = playing;
     bars.classList.toggle("playing", playing);
     bars.classList.toggle("muted",  !playing);
   };
+  setUI(false);
 
-  const tryPlay = () => {
-    if (!wantsMusic) return;
-    audio.play().then(() => setUI(true)).catch(() => setUI(false));
+  // The API calls this global once the iframe_api script has loaded.
+  window.onYouTubeIframeAPIReady = () => {
+    ytPlayer = new YT.Player("ytPlayer", {
+      videoId: YT_VIDEO_ID,
+      playerVars: {
+        autoplay: 1,
+        loop: 1,
+        playlist: YT_VIDEO_ID, // required for single-video looping
+        controls: 0,
+        disablekb: 1,
+        modestbranding: 1,
+        playsinline: 1,
+        rel: 0
+      },
+      events: {
+        onReady: (e) => {
+          ytReady = true;
+          e.target.setVolume(38);
+          if (wantsMusic) e.target.playVideo(); // may be blocked until a gesture
+        },
+        onStateChange: (e) => {
+          if (e.data === YT.PlayerState.PLAYING) setUI(true);
+          else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) setUI(false);
+        }
+      }
+    });
   };
 
-  // Auto-play attempt; graceful fallback on first interaction
-  tryPlay();
+  // Inject the YouTube IFrame API script.
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
 
+  // Browsers block autoplay-with-sound; resume on the first user gesture.
   const onFirst = () => {
-    if (wantsMusic && !musicPlaying) tryPlay();
+    if (wantsMusic && ytReady && !musicPlaying) ytPlayer.playVideo();
     document.removeEventListener("touchstart", onFirst);
     document.removeEventListener("click",      onFirst);
   };
   document.addEventListener("touchstart", onFirst, { passive: true, once: true });
   document.addEventListener("click",      onFirst, { once: true });
 
+  // FAB toggles based on actual playback state.
   fab.addEventListener("click", (e) => {
     e.stopPropagation();
-    wantsMusic = !wantsMusic;
-    if (wantsMusic) {
-      tryPlay();
+    if (!ytReady) return;
+    if (musicPlaying) {
+      wantsMusic = false;
+      ytPlayer.pauseVideo();
     } else {
-      audio.pause();
-      setUI(false);
+      wantsMusic = true;
+      ytPlayer.playVideo();
     }
   });
 }
