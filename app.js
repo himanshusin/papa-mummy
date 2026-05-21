@@ -1,6 +1,7 @@
-// ════════════════════════════════════════════════════════════════
-//  Anniversary App · 56th · Papa & Mummy
-// ════════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════════
+//  56th Anniversary · Celebrity Dark Luxury Edition
+//  Papa & Mummy · 21 May 2026
+// ═══════════════════════════════════════════════════════════════════
 
 const memories = [
   {
@@ -21,7 +22,7 @@ const memories = [
     id: 3,
     file: "9. papa mummy - mummy loving watching  papa.jpg",
     chapter: "साथ-साथ कदम",
-    title: "एक-दूसरे के लिए प्यार और सम्मान",
+    title: "एक-दूसरे के लिए प्यार",
     desc: "शादी के 56 सालों बाद भी आप दोनों के बीच का यह अनमोल प्यार और आपसी सम्मान देखकर, हम सब बच्चे भी अपने जीवन में ऐसा ही पवित्र रिश्ता जीना चाहते हैं।"
   },
   {
@@ -56,43 +57,43 @@ const memories = [
     id: 8,
     file: "13. papa mummy at niagra falls .jpg",
     chapter: "घूमने-फिरने की यादें",
-    title: "नियाग्रा फॉल्स का दौरा",
-    desc: "नियाग्रा फॉल्स के बहते पानी के बीच आप दोनों का यह खुशनुमा समय। एक-दूसरे का हाथ थामे हर पल को जीना और एक-दूसरे का ख्याल रखना ही आपकी पहचान है।"
+    title: "नियाग्रा फॉल्स",
+    desc: "नियाग्रा फॉल्स के बहते पानी के बीच आप दोनों का यह खुशनुमा समय। एक-दूसरे का हाथ थामे हर पल को जीना और ख्याल रखना ही आपकी पहचान है।"
   },
   {
     id: 9,
     file: "3. papa mummy at us trip .jpg",
     chapter: "घूमने-फिरने की यादें",
-    title: "अमेरिका यात्रा की यादें",
-    desc: "उम्र के इस खूबसूरत पड़ाव पर भी आप दोनों का साथ घूमना और मुस्कुराना हम सभी बच्चों को सिखाता है कि अगर सच्चा जीवनसाथी साथ हो तो हर राह आसान हो जाती है।"
+    title: "अमेरिका यात्रा",
+    desc: "उम्र के इस खूबसूरत पड़ाव पर भी आप दोनों का साथ घूमना हम सभी बच्चों को सिखाता है कि अगर सच्चा जीवनसाथी साथ हो तो हर राह आसान हो जाती है।"
   },
   {
     id: 10,
     file: "10. papa mummy with papas sister and nephew and neice.jpg",
     chapter: "परिवार की जिम्मेदारी",
-    title: "पूरे परिवार के साथ जुड़ाव",
+    title: "पूरे परिवार के साथ",
     desc: "सिर्फ हमारे लिए ही नहीं, बल्कि बुआ और पूरे परिवार के साथ हर रिश्ते को इतनी आत्मीयता और जिम्मेदारी से निभाना — हमें अपनों की कद्र करना सिखाता है।"
   },
   {
     id: 11,
     file: "5. papa mummy with all daughters.jpg",
     chapter: "परिवार की जिम्मेदारी",
-    title: "अपनी प्यारी बेटियों के साथ",
-    desc: "हम सब बेटियों को आपकी बेटियां होने पर बहुत गर्व है। हमारी हर छोटी-बड़ी खुशी के लिए आप दोनों ने जो निस्वार्थ प्यार और आशीर्वाद दिया है, उसका हम आभार मानते हैं।"
+    title: "प्यारी बेटियों के साथ",
+    desc: "हम सब बेटियों को आपकी बेटियां होने पर बहुत गर्व है। हमारी हर छोटी-बड़ी खुशी के लिए आप दोनों ने जो निस्वार्थ प्यार दिया है, उसका हम आभार मानते हैं।"
   },
   {
     id: 12,
     file: "4. papa mummy with all their kids.jpg",
     chapter: "परिवार की जिम्मेदारी",
     title: "बच्चों का भरा-पूरा परिवार",
-    desc: "हम सभी बच्चों को अपने साये में रखना, हर कदम पर हमारा मार्गदर्शन करना और एकजुट रखना। आप दोनों का निस्वार्थ प्यार ही हमारा सबसे सुरक्षित आशियाना है।"
+    desc: "हम सभी बच्चों को अपने साये में रखना, हर कदम पर मार्गदर्शन करना और एकजुट रखना। आप दोनों का निस्वार्थ प्यार ही हमारा सबसे सुरक्षित आशियाना है।"
   },
   {
     id: 13,
     file: "7. papa mummy with all kids.jpg",
     chapter: "परिवार की जिम्मेदारी",
-    title: "पारिवारिक उत्सवों का आनंद",
-    desc: "जब भी हम सब बच्चे और परिवार इकट्ठा होते हैं, तो आप दोनों के चेहरे की यह खुशी और आशीर्वाद पूरे घर को सकारात्मकता और प्रेम से भर देता है।"
+    title: "पारिवारिक उत्सव",
+    desc: "जब भी हम सब बच्चे और परिवार इकट्ठा होते हैं, तो आप दोनों के चेहरे की यह खुशी और आशीर्वाद पूरे घर को प्रेम से भर देता है।"
   },
   {
     id: 14,
@@ -106,7 +107,7 @@ const memories = [
     file: "1. papa mummy with grand kids (grown).png",
     chapter: "नाती-पोतों का दुलार",
     title: "बड़े होते नाती-पोते",
-    desc: "बचपन से लेकर बड़े होने तक नाती-पोतों को अच्छे संस्कार और भरपूर स्नेह देना। आप दोनों का आशीर्वाद ही हमारी आने वाली पीढ़ियों का सबसे बड़ा सुरक्षा कवच है।"
+    desc: "बचपन से लेकर बड़े होने तक नाती-पोतों को अच्छे संस्कार और भरपूर स्नेह देना। आप दोनों का आशीर्वाद हमारी आने वाली पीढ़ियों का सबसे बड़ा सुरक्षा कवच है।"
   },
   {
     id: 16,
@@ -117,174 +118,381 @@ const memories = [
   }
 ];
 
-// ── State ─────────────────────────────────────────────────────
+// ── State ─────────────────────────────────────────────────────────
 let audio        = null;
 let musicPlaying = false;
 let wantsMusic   = true;
 let lbIndex      = 0;
+let activeDots   = null;  // NodeList of snap dots
+let snapEl       = null;  // the snap scroll container
 
-// ── Init ──────────────────────────────────────────────────────
+// ── Boot ─────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
-  buildTimeline();
-  buildMasonry();
-  initScrollObserver();
+  buildDesktopTimeline();
+  buildSnapStory();
+  buildGallery();
+  initObserver();
   initScrollProgress();
-  initMusic();
+  initCounter();
+  initBokeh();
+  initTilt();
   initLightbox();
-  initPetals();
+  initMusic();
 });
 
-// ── 1. Timeline ───────────────────────────────────────────────
-function buildTimeline() {
-  const el = document.getElementById("timeline");
-  if (!el) return;
+// ════════════════════════════════════════════════════════════════════
+//  DESKTOP TIMELINE  (two-column, centre spine)
+// ════════════════════════════════════════════════════════════════════
+function buildDesktopTimeline() {
+  const tl = document.getElementById("tl");
+  if (!tl) return;
 
-  el.innerHTML = memories.map((m, i) => `
-    <div class="tc" id="tc-${i}">
-      <div class="tc-chapter">
-        <div class="tc-chapter-line"></div>
-        <span class="tc-chapter-label">${m.chapter}</span>
+  tl.innerHTML += memories.map(m => `
+    <div class="tl-item">
+      <div class="tl-img-wrap">
+        <img class="tl-img" src="${m.file}" alt="${m.title}" loading="lazy" data-lb="${memories.indexOf(m)}" />
       </div>
-      <div class="tc-card">
-        <div class="tc-inner">
-          <div class="tc-img-wrap">
-            <div class="tc-img-frame">
-              <img
-                class="tc-img"
-                src="${m.file}"
-                alt="${m.title}"
-                loading="${i < 2 ? 'eager' : 'lazy'}"
-                data-lb-index="${i}"
-              />
-            </div>
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+      </div>
+      <div class="tl-text-card tl-card">
+        <div class="tl-text">
+          <div class="tl-chapter">
+            <span class="tl-ch-dot"></span>
+            <span class="tl-ch-label">${m.chapter}</span>
           </div>
-          <div class="tc-text">
-            <p class="tc-ornament">✦ 56 वर्षों का साथ ✦</p>
-            <h2 class="tc-title">${m.title}</h2>
-            <div class="tc-rule"></div>
-            <p class="tc-desc">${m.desc}</p>
-          </div>
+          <h2 class="tl-title">${m.title}</h2>
+          <div class="tl-rule"></div>
+          <p class="tl-desc">${m.desc}</p>
         </div>
       </div>
     </div>
   `).join("");
 }
 
-// ── 2. Masonry Gallery ────────────────────────────────────────
-function buildMasonry() {
+// ════════════════════════════════════════════════════════════════════
+//  MOBILE SNAP STORY  (full-viewport, scroll-snap)
+// ════════════════════════════════════════════════════════════════════
+function buildSnapStory() {
+  snapEl = document.getElementById("snap");
+  if (!snapEl) return;
+
+  const total = memories.length;
+
+  // Build story slides
+  const slides = memories.map((m, i) => `
+    <div class="snap-slide" id="ss-${i}">
+      <div class="ss-photo">
+        <img class="ss-photo-img" src="${m.file}" alt="${m.title}" loading="${i < 2 ? 'eager' : 'lazy'}" data-lb="${i}" />
+        <div class="ss-fade"></div>
+      </div>
+      <div class="ss-body">
+        <div class="ss-meta">
+          <span class="ss-chapter">${m.chapter}</span>
+          <span class="ss-counter">${i + 1} / ${total}</span>
+        </div>
+        <h2 class="ss-title">${m.title}</h2>
+        <div class="ss-rule"></div>
+        <p class="ss-desc">${m.desc}</p>
+        <div class="ss-dots" id="dots-${i}">
+          ${memories.map((_, di) => `<div class="ss-dot${di === i ? ' active' : ''}"></div>`).join("")}
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  // End slide — link out to gallery
+  const endSlide = `
+    <div class="snap-slide snap-end" id="ss-end">
+      <p class="snap-end-label">तस्वीरों में यादें देखें</p>
+      <a class="snap-end-btn" href="#gallery">
+        यादों का झरोखा
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 4v16M5 13l7 7 7-7"/>
+        </svg>
+      </a>
+    </div>
+  `;
+
+  snapEl.innerHTML = slides + endSlide;
+
+  // Update dots as user scrolls inside the snap container
+  snapEl.addEventListener("scroll", onSnapScroll, { passive: true });
+}
+
+function onSnapScroll() {
+  if (!snapEl) return;
+  const slideH = snapEl.clientHeight;
+  const idx    = Math.round(snapEl.scrollTop / slideH);
+
+  // Update all dot sets
+  document.querySelectorAll(".ss-dots").forEach((dotSet) => {
+    const dots = dotSet.querySelectorAll(".ss-dot");
+    dots.forEach((d, di) => d.classList.toggle("active", di === idx));
+  });
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  MASONRY GALLERY
+// ════════════════════════════════════════════════════════════════════
+function buildGallery() {
   const el = document.getElementById("masonry");
   if (!el) return;
 
   el.innerHTML = memories.map((m, i) => `
-    <div class="mi" data-lb-index="${i}">
+    <div class="mi" data-lb="${i}">
       <img class="mi-img" src="${m.file}" alt="${m.title}" loading="lazy" />
       <div class="mi-cap">${m.title}</div>
     </div>
   `).join("");
 }
 
-// ── 3. Scroll Intersection Observer ──────────────────────────
-function initScrollObserver() {
+// ════════════════════════════════════════════════════════════════════
+//  SCROLL OBSERVER  (fade-in for timeline items + gallery)
+// ════════════════════════════════════════════════════════════════════
+function initObserver() {
   const obs = new IntersectionObserver((entries) => {
-    entries.forEach((e, delay) => {
+    entries.forEach((e) => {
       if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add("visible"), 80);
+        e.target.classList.add("vis");
         obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: "0px 0px -5% 0px" });
+  }, { threshold: 0.1, rootMargin: "0px 0px -4% 0px" });
 
-  document.querySelectorAll(".tc, .mi").forEach(el => obs.observe(el));
+  document.querySelectorAll(".tl-item, .mi").forEach(el => obs.observe(el));
 }
 
-// ── 4. Scroll Progress Bar ─────────────────────────────────────
+// ════════════════════════════════════════════════════════════════════
+//  SCROLL PROGRESS BAR
+// ════════════════════════════════════════════════════════════════════
 function initScrollProgress() {
-  const bar = document.getElementById("scrollProgress");
+  const bar = document.getElementById("progressBar");
   if (!bar) return;
-
   const update = () => {
-    const scrolled = window.scrollY;
-    const total    = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = total > 0 ? `${(scrolled / total) * 100}%` : "0%";
+    const s = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = s > 0 ? `${(window.scrollY / s) * 100}%` : "0%";
   };
-
   window.addEventListener("scroll", update, { passive: true });
 }
 
-// ── 5. Lightbox ───────────────────────────────────────────────
+// ════════════════════════════════════════════════════════════════════
+//  COUNTER ANIMATION  (0 → 56)
+// ════════════════════════════════════════════════════════════════════
+function initCounter() {
+  const el = document.getElementById("heroCounter");
+  if (!el) return;
+
+  const TARGET   = 56;
+  const DURATION = 2200; // ms
+  let started    = false;
+
+  const easeOutExpo = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+
+  const run = () => {
+    if (started) return;
+    started = true;
+    const start = performance.now();
+
+    const tick = (now) => {
+      const t   = Math.min((now - start) / DURATION, 1);
+      el.textContent = Math.round(easeOutExpo(t) * TARGET);
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  // Start after a short delay (let hero animations settle)
+  setTimeout(run, 800);
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  BOKEH PARTICLES  (slow golden orbs)
+// ════════════════════════════════════════════════════════════════════
+function initBokeh() {
+  const canvas = document.getElementById("bokeh");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+
+  let W, H;
+
+  const resize = () => {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  };
+  resize();
+  window.addEventListener("resize", resize, { passive: true });
+
+  // Orb color palette: warm golden / rose glows
+  const PALETTE = [
+    [200, 164,  74],   // gold
+    [242, 224, 153],   // gold light
+    [196, 120, 133],   // rose
+    [255, 255, 255],   // white
+    [138, 110,  42],   // gold dark
+  ];
+
+  class Orb {
+    constructor() { this.init(true); }
+
+    init(random = false) {
+      this.x    = Math.random() * W;
+      this.y    = random ? Math.random() * H : H + 80;
+      this.r    = 20 + Math.random() * 60;        // large soft orbs
+      this.vy   = -(0.08 + Math.random() * 0.18); // very slow upward drift
+      this.vx   = (Math.random() - 0.5) * 0.12;
+      this.life = 0;
+      this.maxLife = 300 + Math.random() * 400;   // long life
+      this.col  = PALETTE[Math.floor(Math.random() * PALETTE.length)];
+      this.wobbleOffset = Math.random() * Math.PI * 2;
+    }
+
+    update() {
+      this.life++;
+      this.x += this.vx + Math.sin(this.life * 0.008 + this.wobbleOffset) * 0.25;
+      this.y += this.vy;
+      if (this.y < -this.r * 2 || this.life > this.maxLife) this.init();
+    }
+
+    draw() {
+      const fade = Math.min(this.life / 60, 1) * Math.min((this.maxLife - this.life) / 60, 1);
+      const alpha = fade * 0.18;
+      const [r, g, b] = this.col;
+
+      const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
+      grad.addColorStop(0,   `rgba(${r},${g},${b},${alpha})`);
+      grad.addColorStop(0.5, `rgba(${r},${g},${b},${alpha * 0.5})`);
+      grad.addColorStop(1,   `rgba(${r},${g},${b},0)`);
+
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fillStyle = grad;
+      ctx.fill();
+    }
+  }
+
+  // Fewer on mobile for battery
+  const COUNT = window.innerWidth < 640 ? 14 : 28;
+  const orbs  = Array.from({ length: COUNT }, () => new Orb());
+
+  let raf;
+  const loop = () => {
+    ctx.clearRect(0, 0, W, H);
+    orbs.forEach(o => { o.update(); o.draw(); });
+    raf = requestAnimationFrame(loop);
+  };
+  loop();
+
+  // Pause animation when hero is out of view
+  const hero = document.getElementById("hero");
+  if (hero) {
+    new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        if (!raf) loop();
+      } else {
+        cancelAnimationFrame(raf);
+        raf = null;
+      }
+    }, { threshold: 0 }).observe(hero);
+  }
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  GALLERY 3-D TILT  (desktop pointer events)
+// ════════════════════════════════════════════════════════════════════
+function initTilt() {
+  // Only for pointer devices
+  if (window.matchMedia("(hover: none)").matches) return;
+
+  document.addEventListener("mousemove", (e) => {
+    const card = e.target.closest(".mi");
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x    = (e.clientX - rect.left) / rect.width  - 0.5;
+    const y    = (e.clientY - rect.top)  / rect.height - 0.5;
+    card.style.transform = `perspective(900px) rotateY(${x * 9}deg) rotateX(${y * -9}deg) scale(1.03)`;
+    card.style.transition = "transform 0.1s ease";
+  });
+
+  document.addEventListener("mouseleave", (e) => {
+    const card = e.target.closest?.(".mi");
+    if (card) {
+      card.style.transform = "";
+      card.style.transition = "transform 0.6s cubic-bezier(0.16,1,0.3,1)";
+    }
+  }, true);
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  LIGHTBOX
+// ════════════════════════════════════════════════════════════════════
 function initLightbox() {
-  const lb      = document.getElementById("lightbox");
-  const lbImg   = document.getElementById("lbImg");
-  const lbCap   = document.getElementById("lbCaption");
-  const lbClose = document.getElementById("lbClose");
-  const lbPrev  = document.getElementById("lbPrev");
-  const lbNext  = document.getElementById("lbNext");
+  const lb      = document.getElementById("lb");
+  const img     = document.getElementById("lbImg");
+  const cap     = document.getElementById("lbCap");
+  const closeEl = document.getElementById("lbClose");
+  const prevEl  = document.getElementById("lbPrev");
+  const nextEl  = document.getElementById("lbNext");
   if (!lb) return;
 
-  const open = (idx) => {
+  const show = (idx) => {
     lbIndex = ((idx % memories.length) + memories.length) % memories.length;
-    const m = memories[lbIndex];
-    lbImg.src = m.file;
-    lbImg.alt = m.title;
-    lbCap.textContent = m.title;
+    const m  = memories[lbIndex];
+    img.src  = m.file;
+    img.alt  = m.title;
+    cap.textContent = m.title;
     lb.classList.add("open");
     document.body.style.overflow = "hidden";
   };
 
-  const close = () => {
+  const hide = () => {
     lb.classList.remove("open");
     document.body.style.overflow = "";
   };
 
-  const prev = () => open(lbIndex - 1);
-  const next = () => open(lbIndex + 1);
-
-  // Open on image click
+  // Open on any [data-lb] click
   document.addEventListener("click", (e) => {
-    const target = e.target.closest("[data-lb-index]");
-    if (target) open(parseInt(target.dataset.lbIndex, 10));
+    const t = e.target.closest("[data-lb]");
+    if (t) show(parseInt(t.dataset.lb, 10));
   });
 
-  lbClose.addEventListener("click", close);
-  lbPrev.addEventListener("click", prev);
-  lbNext.addEventListener("click", next);
-
-  lb.addEventListener("click", (e) => {
-    if (e.target === lb) close();
-  });
+  closeEl.addEventListener("click", hide);
+  prevEl.addEventListener("click",  () => show(lbIndex - 1));
+  nextEl.addEventListener("click",  () => show(lbIndex + 1));
+  lb.addEventListener("click",      (e) => { if (e.target === lb) hide(); });
 
   // Keyboard
   document.addEventListener("keydown", (e) => {
     if (!lb.classList.contains("open")) return;
-    if (e.key === "Escape")      close();
-    if (e.key === "ArrowLeft")   prev();
-    if (e.key === "ArrowRight")  next();
+    const map = { Escape: hide, ArrowLeft: () => show(lbIndex - 1), ArrowRight: () => show(lbIndex + 1) };
+    map[e.key]?.();
   });
 
-  // Swipe on mobile
-  let touchStartX = 0;
-  lb.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  // Swipe
+  let tx = 0;
+  lb.addEventListener("touchstart", (e) => { tx = e.changedTouches[0].clientX; }, { passive: true });
   lb.addEventListener("touchend",   (e) => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 48) dx < 0 ? show(lbIndex + 1) : show(lbIndex - 1);
   }, { passive: true });
 }
 
-// ── 6. Music ──────────────────────────────────────────────────
+// ════════════════════════════════════════════════════════════════════
+//  MUSIC
+// ════════════════════════════════════════════════════════════════════
 function initMusic() {
   const fab  = document.getElementById("musicFab");
-  const bars = document.getElementById("musicBars");
+  const bars = document.getElementById("vizBars");
   if (!fab) return;
 
-  audio = new Audio("music.mp3");
+  audio        = new Audio("music.mp3");
   audio.loop   = true;
-  audio.volume = 0.4;
+  audio.volume = 0.38;
 
   const setUI = (playing) => {
     musicPlaying = playing;
     bars.classList.toggle("playing", playing);
     bars.classList.toggle("muted",  !playing);
-    fab.setAttribute("aria-label", playing ? "Mute music" : "Play music");
   };
 
   const tryPlay = () => {
@@ -292,16 +500,16 @@ function initMusic() {
     audio.play().then(() => setUI(true)).catch(() => setUI(false));
   };
 
-  const onInteraction = () => {
-    if (wantsMusic && !musicPlaying) tryPlay();
-    document.removeEventListener("touchstart", onInteraction);
-    document.removeEventListener("click",      onInteraction);
-  };
-
-  // Attempt autoplay; fall back to first interaction
+  // Auto-play attempt; graceful fallback on first interaction
   tryPlay();
-  document.addEventListener("touchstart", onInteraction, { passive: true, once: true });
-  document.addEventListener("click",      onInteraction, { once: true });
+
+  const onFirst = () => {
+    if (wantsMusic && !musicPlaying) tryPlay();
+    document.removeEventListener("touchstart", onFirst);
+    document.removeEventListener("click",      onFirst);
+  };
+  document.addEventListener("touchstart", onFirst, { passive: true, once: true });
+  document.addEventListener("click",      onFirst, { once: true });
 
   fab.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -313,84 +521,4 @@ function initMusic() {
       setUI(false);
     }
   });
-}
-
-// ── 7. Floating Petal Canvas ──────────────────────────────────
-function initPetals() {
-  const canvas = document.getElementById("petalCanvas");
-  if (!canvas) return;
-
-  const ctx = canvas.getContext("2d");
-  let W, H, petals = [];
-
-  const resize = () => {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  };
-  resize();
-  window.addEventListener("resize", resize, { passive: true });
-
-  const COLORS = [
-    "rgba(201,169,110,0.55)",
-    "rgba(232,213,168,0.55)",
-    "rgba(201,123,132,0.4)",
-    "rgba(240,214,217,0.5)",
-    "rgba(255,255,255,0.45)"
-  ];
-
-  class Petal {
-    constructor() { this.reset(true); }
-
-    reset(init = false) {
-      this.x  = Math.random() * W;
-      this.y  = init ? Math.random() * H : -20;
-      this.r  = 3 + Math.random() * 6;
-      this.vx = (Math.random() - 0.5) * 0.6;
-      this.vy = 0.5 + Math.random() * 1.2;
-      this.angle  = Math.random() * Math.PI * 2;
-      this.spin   = (Math.random() - 0.5) * 0.04;
-      this.color  = COLORS[Math.floor(Math.random() * COLORS.length)];
-      this.wobble = Math.random() * Math.PI * 2;
-    }
-
-    update() {
-      this.wobble += 0.02;
-      this.x += this.vx + Math.sin(this.wobble) * 0.4;
-      this.y += this.vy;
-      this.angle += this.spin;
-      if (this.y > H + 20) this.reset();
-    }
-
-    draw() {
-      ctx.save();
-      ctx.translate(this.x, this.y);
-      ctx.rotate(this.angle);
-      ctx.fillStyle = this.color;
-      ctx.beginPath();
-      // Simple petal shape
-      ctx.ellipse(0, 0, this.r, this.r * 1.8, 0, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
-    }
-  }
-
-  // Fewer petals on mobile for performance
-  const count = window.innerWidth < 640 ? 18 : 36;
-  for (let i = 0; i < count; i++) petals.push(new Petal());
-
-  let raf;
-  const loop = () => {
-    ctx.clearRect(0, 0, W, H);
-    petals.forEach(p => { p.update(); p.draw(); });
-    raf = requestAnimationFrame(loop);
-  };
-  loop();
-
-  // Pause when hero leaves viewport to save battery
-  const heroEl = document.getElementById("hero");
-  if (heroEl && "IntersectionObserver" in window) {
-    new IntersectionObserver((entries) => {
-      entries[0].isIntersecting ? loop() : cancelAnimationFrame(raf);
-    }, { threshold: 0 }).observe(heroEl);
-  }
 }

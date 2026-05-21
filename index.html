@@ -3,91 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>विवाह की 56वीं वर्षगांठ – पापा और मम्मी</title>
-  <meta name="description" content="पापा और मम्मी की विवाह की 56वीं वर्षगांठ के सुंदर सफर की एक डिजिटल यात्रा।">
+  <title>56वीं वर्षगांठ · पापा &amp; मम्मी</title>
+  <meta name="description" content="पापा और मम्मी की 56वीं वर्षगांठ — एक अनमोल सफर।">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Rozha+One&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress-bar" id="scrollProgress"></div>
+  <!-- Cinematic grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
 
-  <!-- Music Button -->
-  <button class="music-fab" id="musicFab" aria-label="Music toggle">
-    <div class="music-bars" id="musicBars">
-      <span></span><span></span><span></span><span></span>
+  <!-- Scroll progress -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Music FAB -->
+  <button class="music-fab" id="musicFab" aria-label="Toggle music">
+    <div class="viz-bars" id="vizBars">
+      <span></span><span></span><span></span><span></span><span></span>
     </div>
   </button>
 
-  <!-- ═══════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
        HERO
-  ═══════════════════════════════════════════════════ -->
-  <header class="hero" id="hero">
-    <canvas class="petal-canvas" id="petalCanvas"></canvas>
-    <div class="hero-glow"></div>
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas class="bokeh" id="bokeh"></canvas>
+    <div class="hero-rings" aria-hidden="true">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+    </div>
 
     <div class="hero-body">
-      <p class="hero-eyebrow">21 मई, 1970 — 21 मई, 2026</p>
-      <div class="hero-num-wrap">
-        <span class="hero-num" id="heroNum">56</span>
-        <span class="hero-num-label">वर्ष</span>
+      <p class="hero-eyebrow">21 मई 1970 &nbsp;—&nbsp; 21 मई 2026</p>
+
+      <div class="hero-counter-wrap">
+        <span class="hero-counter" id="heroCounter">0</span>
+        <span class="hero-counter-label">वर्ष</span>
       </div>
-      <h1 class="hero-title">पापा &amp; मम्मी की<br>स्वर्णिम वर्षगांठ</h1>
-      <p class="hero-sub">प्यार, त्याग और जीवन के 56 अनमोल साल</p>
+
+      <h1 class="hero-headline">प्यार का अटूट बंधन</h1>
+      <p class="hero-subline">पापा &amp; मम्मी</p>
+
       <a href="#story" class="hero-cta">
-        <span>सफर देखें</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        <span>अनमोल यादें देखें</span>
+        <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 4v16M5 13l7 7 7-7"/>
+        </svg>
       </a>
     </div>
 
-    <div class="hero-scroll-hint">
-      <div class="mouse-icon"><div class="mouse-wheel"></div></div>
+    <div class="hero-waveform" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <polyline class="wf-line" points="0,30 60,10 120,48 180,20 240,42 300,15 360,38 420,12 480,44 540,22 600,40 660,8 720,35 780,18 840,46 900,12 960,38 1020,20 1080,44 1140,10 1200,36 1260,22 1320,48 1380,18 1440,30"/>
+      </svg>
     </div>
-  </header>
+  </section>
 
-  <!-- ═══════════════════════════════════════════════════
-       STORY TIMELINE
-  ═══════════════════════════════════════════════════ -->
-  <main id="story" class="story-section">
-    <div class="story-header">
-      <h2 class="section-heading">प्यार का सुंदर सफर</h2>
-      <div class="section-rule"><span></span><span class="diamond">◆</span><span></span></div>
+  <!-- ══════════════════════════════════════════
+       TICKER
+  ══════════════════════════════════════════ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>56 साल का अटूट बंधन</span><span class="tk-dot">◆</span>
+      <span>4 प्यारे बच्चे</span><span class="tk-dot">◆</span>
+      <span>असंख्य खूबसूरत यादें</span><span class="tk-dot">◆</span>
+      <span>एक परिवार, एक प्यार</span><span class="tk-dot">◆</span>
+      <span>56 साल का अटूट बंधन</span><span class="tk-dot">◆</span>
+      <span>4 प्यारे बच्चे</span><span class="tk-dot">◆</span>
+      <span>असंख्य खूबसूरत यादें</span><span class="tk-dot">◆</span>
+      <span>एक परिवार, एक प्यार</span><span class="tk-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       STORY
+       Desktop  → .tl (vertical centre timeline)
+       Mobile   → .snap (full-viewport snap slides)
+  ══════════════════════════════════════════ -->
+  <section id="story" class="story-section">
+    <div class="sec-head">
+      <div class="sec-rule"></div>
+      <h2 class="sec-title">हमारा सफर</h2>
+      <div class="sec-rule"></div>
     </div>
 
-    <div class="timeline" id="timeline"></div>
-  </main>
+    <!-- Mobile snap story -->
+    <div class="snap" id="snap">
+      <!-- injected by JS -->
+    </div>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- Desktop timeline -->
+    <div class="tl" id="tl">
+      <div class="tl-spine"></div>
+      <!-- injected by JS -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
        GALLERY
-  ═══════════════════════════════════════════════════ -->
+  ══════════════════════════════════════════ -->
   <section id="gallery" class="gallery-section">
-    <div class="story-header">
-      <h2 class="section-heading">यादों का झरोखा</h2>
-      <div class="section-rule"><span></span><span class="diamond">◆</span><span></span></div>
+    <div class="sec-head">
+      <div class="sec-rule"></div>
+      <h2 class="sec-title">तस्वीरों में यादें</h2>
+      <div class="sec-rule"></div>
     </div>
     <div class="masonry" id="masonry"></div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
+       QUOTE
+  ══════════════════════════════════════════ -->
+  <section class="quote-sec">
+    <div class="quote-glow"></div>
+    <blockquote class="big-quote">
+      "जीवन का सबसे सुंदर वरदान<br>एक साथ बिताए 56 साल।"
+    </blockquote>
+    <p class="quote-credit">— आपके बच्चों की तरफ से, सप्रेम</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════
        FOOTER
-  ═══════════════════════════════════════════════════ -->
+  ══════════════════════════════════════════ -->
   <footer class="site-footer">
-    <div class="footer-ornament">❦</div>
-    <blockquote class="footer-quote">"जीवन का सबसे सुंदर वरदान — एक साथ बिताए 56 साल।"</blockquote>
-    <p class="footer-by">सादर समर्पित — आपके बच्चों, दामादों और नाती-पोतों की तरफ से<br>सप्रेम निर्मित · 21 मई, 2026</p>
+    <div class="footer-56">56</div>
+    <p class="footer-ded">सादर समर्पित — आपके बच्चों, दामादों और नाती-पोतों की तरफ से</p>
+    <p class="footer-date">21 मई, 2026</p>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
        LIGHTBOX
-  ═══════════════════════════════════════════════════ -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
-    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
-    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
-    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
-    <div class="lb-inner">
-      <img class="lb-img" id="lbImg" src="" alt="" />
-      <p class="lb-caption" id="lbCaption"></p>
-    </div>
+  ══════════════════════════════════════════ -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true">
+    <button class="lb-x"    id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-prev" id="lbPrev"  aria-label="Previous">‹</button>
+    <button class="lb-next" id="lbNext"  aria-label="Next">›</button>
+    <figure class="lb-fig">
+      <img   class="lb-img" id="lbImg" src="" alt="">
+      <figcaption class="lb-cap" id="lbCap"></figcaption>
+    </figure>
   </div>
 
   <script src="app.js"></script>
